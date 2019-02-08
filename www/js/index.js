@@ -1,4 +1,4 @@
-var URL = "https://braintree.github.io/popup-bridge-example/";
+var URL = "iab.html";
 
 var webView, iabOpts, useIAB, osVersion, iab;
 
@@ -24,20 +24,7 @@ function openIAB(){
 }
 
 function testInjection(){
-    iab.executeScript({
-        code: "document.getElementsByTagName('h1')[0].innerHTML = document.getElementsByTagName('h1')[0].innerHTML + \" (injected)\";(function() { var body = document.querySelector('body'); var bottom = document.createElement('div'); bottom.innerHTML = 'Absolute Bottom'; bottom.classList.add('bottom'); body.appendChild(bottom); })();"
-    }, function(returnValue){
-        returnValue = returnValue[0];
 
-       log("executeScript returned value: " + returnValue);
-    });
-
-    iab.insertCSS({
-                  code: "body *{color: red !important;} \
-                  .bottom { position: fixed; bottom: 0; z-index: 500; width: 100%; background: #fff; color: #495965; -moz-box-shadow: 0 0 5px #888; -webkit-box-shadow: 0 0 5px #888; box-shadow: 0 0 5px #888; padding: 10px; font-size: 20px;}"
-    }, function(){
-        log("insertCSS returned");
-    });
 }
 
 function onDeviceReady(){
@@ -46,7 +33,7 @@ function onDeviceReady(){
     osVersion = parseFloat(device.version);
 
     if( device.platform === "iOS" ) {
-        iabOpts = 'location=no,toolbar=yes';
+        iabOpts = 'location=no,toolbar=no,disallowoverscroll=yes,zoom=no,transitionstyle=crossdissolve';
         if(window.webkit && window.webkit.messageHandlers ) {
             webView = "WKWebView" ;
         }else{

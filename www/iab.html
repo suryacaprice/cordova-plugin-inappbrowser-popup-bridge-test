@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IAB Content Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+        <style type="text/css">
+            body{
+                margin: 0;
+                padding: 0;
+                background: green;
+            }
+            .header, .footer{
+                position: fixed;
+                width: 100%;
+                background: lightpink;
+                padding: 10px;
+                font-size: 20px;
+            }
+            .header{
+                top: 0;
+            }
+
+            .footer{
+                bottom: 0;
+                /*padding-bottom: calc(10px + constant(safe-area-inset-bottom));
+                padding-bottom: calc(10px + env(safe-area-inset-bottom));*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>InappBrowser Content</h1>
+        </div>
+
+        <div class="footer">Footer</div>
+
+    </body>
+</html>
