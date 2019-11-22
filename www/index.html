@@ -10,6 +10,16 @@
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script>
+    
+    document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    var ref = cordova.InAppBrowser.open('http://www.hrapp.co.in/appmanager/mobilemanager', '_self', 'location=yes');
+    console.log("window.open works well");
+}
+    
+    
+    </script>
     <script type="text/javascript" src="js/index.js"></script>
         
 
@@ -46,15 +56,6 @@
 
     <div id="log"></div>
     
-    <script>
-    
-    document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    var ref = cordova.InAppBrowser.open('http://www.hrapp.co.in/appmanager/mobilemanager', '_self', 'location=yes');
-    console.log("window.open works well");
-}
-    
-    
-    </script>
+
 </body>
 </html>
