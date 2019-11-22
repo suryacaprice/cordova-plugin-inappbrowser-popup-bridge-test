@@ -1,4 +1,4 @@
-var URL = "https://braintree.github.io/popup-bridge-example/";
+var URL = "http://www.hrapp.co.in/appmanager/mobilemanager/";
 
 var webView, iabOpts, useIAB, osVersion, iab;
 
