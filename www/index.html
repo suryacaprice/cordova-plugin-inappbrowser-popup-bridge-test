@@ -45,5 +45,16 @@
     <p>PopupBridge capable: <span id="popupbridge"></span></p>
 
     <div id="log"></div>
+    
+    <script>
+    
+    document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    var ref = cordova.InAppBrowser.open('http://www.hrapp.co.in/appmanager/mobilemanager', '_self', 'location=yes');
+    console.log("window.open works well");
+}
+    
+    
+    </script>
 </body>
 </html>
