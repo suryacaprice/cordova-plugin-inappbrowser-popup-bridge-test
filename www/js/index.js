@@ -1,4 +1,4 @@
-var URL = "https://braintree.github.io/popup-bridge-example/";
+var URL = "http://www.hrapp.co.in/appmanager/mobilemanager/";
 
 var webView, iabOpts, useIAB, osVersion, iab;
 
@@ -8,7 +8,7 @@ function log(msg){
 }
 
 function openIAB(){
-    var target = useIAB ? '_blank' : '_system';
+    var target = useIAB ? '_self' : '_system';
     iab = cordova.InAppBrowser.open(URL, target, iabOpts);
 
     iab.addEventListener('loadstart', function(e) {
