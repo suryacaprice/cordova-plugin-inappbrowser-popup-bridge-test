@@ -5,6 +5,8 @@
     <author>Dave Alden</author>
     <content src="index.html" />
     <access origin="*" />
+    <access origin="*" subdomains="true" />
+    <access origin="*.hrapp.co.in*" subdomains="true" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
