@@ -11,22 +11,6 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script>         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
-
-
-        }
-
-        // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-        //
-        function onDeviceReady() {
-        
-        
-         window.open('https://braintree.github.io/popup-bridge-example/', '_self');
-        
-        }
-        
-    </script>
         
 
     <style type="text/css">
@@ -52,7 +36,7 @@
     </style>
 </head>
 
-<body body onload="onLoad()">
+<body>
     <h2>PopupBridge Test App</h2>
     <button id="open" onclick="openIAB()">Open Test Page in IAB</button>
 
